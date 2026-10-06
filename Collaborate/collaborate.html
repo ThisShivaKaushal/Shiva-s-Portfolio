@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborate</title>
+    <link rel="stylesheet" href="collaborate.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <img>
+
+        <div class="navbar">
+            <nav>
+                <a href="Work/work.html">Work</a>
+                <a href="AboutMe/aboutme.html">About Me</a>
+                <a href="Contact/contact.html">Contact</a>
+                <a href="Collaborate/collaborate.html">Collaborate</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="collaboratecontent">
+
+        <h1>Collaborate</h1>
+        <h2>Let's build something great together</h2>
+        <p>Tell us a bit about your project goals, timeline, and scope, and we'll be in touch within 24 hours.</p>
+
+        <form class="collabform">
+
+            <div class="personal">
+                <div class="information">
+                    <label for="fullname">Full Name :</label>
+                    <input type="text" id="fullname" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="information">
+                    <label for="email">E-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                </div>
+
+            </div>
+
+            <div class="personal">
+                <div class="information">
+                    <label for="teens">Are you a teenager?</label>
+                    <select id="forteen" name="teen" required>
+                        <option value="" disabled selected>Select a option correctly</option>
+                        <option value="Yes">Yes, I'm a teenager</option>
+                        <option value="No">No, I'm not a teenager</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="personal full-width">
+                <label for="projectdetail">Project Details & Objective</label>
+                <textarea id="projectdetail" name="details" rows="7"
+                    placeholder="describe your project idea, goals, or target timeline..." required></textarea>
+            </div>
+
+            <div class="submitpart">
+                <button type="submit" class="submitbutton">Asked for Collaborate<span></span></button>
+
+            </div>
+
+        </form>
+
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
