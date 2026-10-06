@@ -29,17 +29,17 @@
         <h2>Let's build something great together</h2>
         <p>Tell us a bit about your project goals, timeline, and scope, and we'll be in touch within 24 hours.</p>
 
-        <form class="collabform">
+        <form class="collabform" id="collaborationform">
 
             <div class="personal">
                 <div class="information">
                     <label for="fullname">Full Name :</label>
-                    <input type="text" id="fullname" name="name" placeholder="John Doe" required>
+                    <input type="text" id="fullname" placeholder="John Doe" required>
                 </div>
 
                 <div class="information">
-                    <label for="email">E-mail :</label>
-                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                    <label for="useremail">E-mail :</label>
+                    <input type="email" id="useremail" placeholder="johndoe@example.com" required>
                 </div>
 
             </div>
@@ -47,7 +47,7 @@
             <div class="personal">
                 <div class="information">
                     <label for="teens">Are you a teenager?</label>
-                    <select id="forteen" name="teen" required>
+                    <select id="teens" name="teen" required>
                         <option value="" disabled selected>Select a option correctly</option>
                         <option value="Yes">Yes, I'm a teenager</option>
                         <option value="No">No, I'm not a teenager</option>
@@ -62,7 +62,7 @@
             </div>
 
             <div class="submitpart">
-                <button type="submit" class="submitbutton">Asked for Collaborate<span></span></button>
+                <button type="submit" id="submitbutton" class="submitbutn">Asked for Collaborate<span></span></button>
 
             </div>
 
@@ -70,6 +70,10 @@
 
     </main>
     <script>lucide.createIcons();</script>
+    <script type="module" src="collaborate.js"></script>
+
+
+
 </body>
 
 </html>
