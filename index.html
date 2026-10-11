@@ -9,20 +9,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body>
+<body id="home-page">
+    <div id="header"></div>
     <main class="portfolio">
-        <header>
-            <img>
-
-            <div class="navbar">
-                <nav>
-                    <a href="Work/work.html">Work</a>
-                    <a href="AboutMe/aboutme.html">About Me</a>
-                    <a href="Contact/contact.html">Contact</a>
-                    <a href="Collaborate/collaborate.html">Collaborate</a>
-                </nav>
-            </div>
-        </header>
 
         <div class="herosection">
             <div id="herotitle">
@@ -79,6 +68,21 @@
 
     </main>
     <script>lucide.createIcons();</script>
+    <script>
+
+        fetch("/header/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '/header/header.css';
+                document.head.appendChild(link);
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+    </script>
 </body>
 
 </html>

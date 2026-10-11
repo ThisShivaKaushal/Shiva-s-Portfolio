@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="aboutme.css">
+</head>
+
+<body id="aboutme-page">
+
+    <div id="header"></div>
+
+    <main class="aboutmecontent">
+
+        <h1>About Me</h1>
+        <h2>Get to know me better</h2>
+        <p>Learn more about my background, skills, and interests.</p>
+
+        <section class="personalinfo">
+            <h3>Personal Information</h3>
+            <p>Name: Shiva Kaushal</p>
+            <p>Email: shivakaushal@example.com</p>
+        </section>
+
+    </main>
+
+    <script>
+
+        fetch("/header/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '/header/header.css';
+                document.head.appendChild(link);
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+    </script>
+
+</body>
+
+</html>

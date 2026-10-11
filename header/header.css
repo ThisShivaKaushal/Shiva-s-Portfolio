@@ -1,0 +1,44 @@
+.navbar nav a {
+    color: #333333;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+}
+
+#home-page .home {
+    display: none;
+}
+
+#work-page .work {
+    display: none;
+}
+
+#collaborate-page .collaborate {
+    display: none;
+}
+
+#contact-page .contact {
+    display: none;
+}
+
+#aboutme-page .aboutme {
+    display: none;
+}
+
+header {
+    z-index: 1000;
+    padding: 6px 4px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgba(224, 242, 241, 0.5);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.548);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 90px;
+}
+
+header img {
+    max-width: 500px;
+}
