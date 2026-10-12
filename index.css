@@ -1,4 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 #header {
-    position: sticky;
+    position: fixed;
     top: 10px;
+    width: 100%;
+    z-index: 100;
+}
+
+body {
+    background-color: #f7f7f7;
+    height: auto;
+
+}
+
+.socialinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    gap: 10px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 16px;
+    margin-left: 1080px;
+
+
+}
+
+.profile {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    z-index: 90;
+    margin-top: 100px;
+
+}
+
+.shiva {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+
+}
+
+.herotitle {
+    position: absolute;
+    font-size: 180px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 1;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+    user-select: none;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#textoutline {
+    color: transparent;
+    -webkit-text-stroke: 2px #1a1a1a;
+    text-stroke: 2px #1a1a1a;
+}
+
+#textsolid {
+    color: #1a1a1a;
+}
+
+
+
+.socialinks img {
+    width: 24px;
+    height: 24px;
+}
+
+.socialinks img:hover {
+    opacity: 0.7;
+}
+
+.socialinks a {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: #1b1b1b;
+    font-size: 16px;
+}
+
+.socialinks a:hover {
+    color: #4e4e4e;
+}
+
+.socialinks {
+    margin-right: 80px;
 }
