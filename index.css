@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +12,67 @@
     top: 10px;
     width: 100%;
     z-index: 100;
+    left: 0;
 }
 
 body {
     background-color: #f7f7f7;
-    height: auto;
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
 
 }
 
-.socialinks {
+.portfolio {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 24px 40px;
     display: flex;
     flex-direction: column;
+    flex: 1;
+}
+
+.herosection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.herotitle {
+    position: absolute;
+    top: 10%;
+    font-size: clamp(3rem, 11vw, 11rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+    white-space: nowrap;
+    z-index: 1;
+    gap: clamp(12px, 2vw, 30px);
+    display: flex;
     justify-content: center;
-    align-items: right;
-    gap: 10px;
-    text-decoration: none;
+    margin-top: 100px;
+    user-select: none;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#textoutline {
+    color: transparent;
+    -webkit-text-stroke: 2px #1a1a1a;
+}
+
+#textsolid {
     color: #1a1a1a;
-    font-size: 16px;
-    margin-left: 1080px;
-
-
 }
 
 .profile {
@@ -37,11 +80,18 @@ body {
     justify-content: center;
     display: flex;
     z-index: 90;
-    margin-top: 100px;
-
+    margin-top: auto;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 480px;
 }
 
 .shiva {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+    display: block;
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     mask-repeat: no-repeat;
 
@@ -50,57 +100,54 @@ body {
 
 }
 
-.herotitle {
-    position: absolute;
-    font-size: 180px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    line-height: 1;
-    white-space: nowrap;
-    z-index: 1;
-    gap: 20px;
+.socialinks {
+    pointer-events: auto;
     display: flex;
-    justify-content: center;
-    margin-top: 300px;
-    user-select: none;
-    right: 50%;
-    transform: translateX(50%);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
 }
-
-#textoutline {
-    color: transparent;
-    -webkit-text-stroke: 2px #1a1a1a;
-    text-stroke: 2px #1a1a1a;
-}
-
-#textsolid {
-    color: #1a1a1a;
-}
-
-
 
 .socialinks img {
     width: 24px;
     height: 24px;
 }
 
-.socialinks img:hover {
-    opacity: 0.7;
-}
-
 .socialinks a {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
     gap: 10px;
+    border-radius: 999px;
+    padding: 10px 20px;
     text-decoration: none;
-    color: #1b1b1b;
-    font-size: 16px;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.2 ease;
 }
 
 .socialinks a:hover {
-    color: #4e4e4e;
+    color: #1a1a1a;
+    transform: translate(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.socialinks {
-    margin-right: 80px;
+.about {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#abouttext {
+    pointer-events: auto;
 }
