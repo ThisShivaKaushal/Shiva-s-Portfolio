@@ -134,5 +134,35 @@ select {
 }
 
 .submitpart {
-    display: inline
+    display: inline-flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.submitbutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    border: none;
+    padding: 14px 34px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(18, 18, 18, 0.88);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    transition: all 0.25s ease;
+}
+
+.submitbutton:hover:not(:disabled) {
+    background: #000000;
+    transform: translate(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16)
+}
+
+.submitbutton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
