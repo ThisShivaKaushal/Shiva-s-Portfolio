@@ -26,8 +26,9 @@ document.getElementById('collaborationform').addEventListener('submit', async (e
     e.preventDefault();
 
     const submitbutton = document.getElementById('submitbutton');
+    const feedbackbox = document.getElementById('formfeedback');
     submitbutton.disabled = true;
-    submitbutton.innerText = "Sending..";
+    submitbutton.innerHTML = `<span>Sending...</span>`
 
     const formData = {
 
@@ -41,13 +42,33 @@ document.getElementById('collaborationform').addEventListener('submit', async (e
     try {
         await addDoc(collection(db, "collaborate"), formData);
 
-        alert("Thank you! Collaboration request submitted successfully:)");
+        feedbackbox.className = 'feedbackpopup feedbackpopuptrue';
+        feedbackbox.innerHTML = `<div class="feedbackicon>
+        <i data-lucide="check-circle-2></i></div>
+        <div class="feedbackcontent">
+        <strong>Collaboration Request Sent!</strong>
+        <p>Thank you for reaching out. I will get back to you within 24 hours.</p>
+        </div>`;
+
+        feedbackbox.style.display = 'flex';
+
         document.getElementById('collaborationform').reset();
     } catch (error) {
         console.error("Error adding document: ", error);
-        alert("Error submitting collaboration request. Please try again.");
+
+        feedbackbox.className = 'feedbackpopup feedbackpopupfalse';
+        feedbackbox.innerHTML = `
+        <div class="feedbackicon">
+        <i data-lucide="alert-circle"></i></div>
+        <div class="feedbackcontent">
+        <strong>Submission Failed</strong>
+        <p>Something went wrong while sending your request. Please try again later.</p></div>`;
+
+        feedbackbox.style.display = 'flex';
     } finally {
         submitbutton.disabled = false;
-        submitbutton.innerHTML = `Send Collabaoration <span>↗</span>`
+        submitbutton.innerHTML = `<span>Send Collabaoration </span><i data-lucide="arrow-up-right"></i>`
+
+        feedbackbox.scrollIntoView({ bahavior: 'smooth', block: 'center' });
     }
 });
