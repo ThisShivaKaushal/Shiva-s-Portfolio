@@ -65,6 +65,12 @@
     <script src="/admin/admin.js" type="module"></script>
     <script>
         lucide.createIcons();
+        function switchTab(tabId) {
+            document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.sidebarbutton').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
     </script>
 
 </body>
