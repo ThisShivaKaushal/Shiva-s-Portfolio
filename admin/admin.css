@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #1a1a1a;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.8);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.2 rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.sidebarbutton {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.sidebarbutton:hover {
+    background: rgba(0, 0, 0, 0.671);
+    color: #fff;
+}
+
+.sidebarbutton.active {
+    background: #111;
+    color: #fff;
+}
+
+.main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(16px);
+}
+
+.gridlist {
+    display: flex;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px #dddddd;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.submitbutton {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.msg-card h3 {
+    font-size: 1.1 rem;
+    margin-bottom: 4px;
+}
