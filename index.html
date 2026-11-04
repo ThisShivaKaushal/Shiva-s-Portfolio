@@ -53,12 +53,34 @@
     </main>
     <div class="more">
 
-        <p>Guys I am just stated publicly, a few months ago, so right now I doesn't have any projects, so
+        <p>Guys I am just stated publicly, a few months ago, so right now I doesn't have any works, so
             wait
             few months, I will participate in hackathons, learn more languages in depth, and then I will
             redesign this page morer.</p>
 
     </div>
+    <section class="server">
+        <div class="serverheader">
+            <h3>Featured Works</h3>
+            <a href="/Work/work.html" class="serverall">View All Works</a>
+        </div>
+
+        <div id="serverworks" class="bentogrid project-grid">
+            <p style="text-align: center; color: #888;">Loading Works....</p>
+        </div>
+    </section>
+
+    <section class="server">
+        <div class="serverheader">
+            <h3>Latest Video</h3>
+            <a href="instagram.com/thisshiva.dev" class="serverall">View on Instagram</a>
+        </div>
+
+        <div id="servervideos" class="bentogrid videos-grid">
+            <p style="text-align: center; color: #888;">Loading Videos....</p>
+
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="footercontent">
@@ -84,6 +106,7 @@
             .catch(error => console.error('Error loading header:', error));
 
     </script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
