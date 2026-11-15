@@ -58,4 +58,28 @@ async function loadInbox() {
     }
 }
 
+document.getElementById('addproject').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const button = e.target.querySelector('button');
+    button.innerHTML = "Adding.."; 
+
+    try {
+        await addDoc(collection(db, "projects"), {
+            title: document.getElementById('projecttitle').value.trim(),
+            liveurl: document.getElementById('projectlink').value.trim(),
+            githuburl: document.getElementById('projectgithub').value.trim(),
+            description: document.getElementById('projectdescription').value.trim(),
+            createdAt: serverTimestamp()
+        });
+        alert('project added successfully!')
+        e.target.reset();
+    } catch (error) {
+        alert("Error adding project!")
+        console.error(error);
+    } finally {
+        button.innerHTML = `<i data-lucide="plus "></i>Publish Project`;
+        window.lucide.createIcons();
+    }
+});
+
 loadInbox();
