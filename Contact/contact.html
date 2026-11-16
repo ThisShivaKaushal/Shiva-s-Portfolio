@@ -5,10 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="/contact/contact.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body id="contact-page">
     <div id="header"></div>
+
+    <main class="contactcontent">
+        <span class="badge">Get in Touch</span>
+        <h2>Let's Talk</h2>
+        <p class="subtitle">Have a question, and idea, or just want to say hi? Drop a message below and I'll reply as
+            soon as possible.</p>
+
+        <div id="formFeedback" class="feedback-banner" style="display: none;"></div>
+
+        <form class="contactform" id="contactform">
+
+            <div class="personal">
+                <div clas="information">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="e.g. Orpheus" required>
+
+                </div>
+
+                <div class="information">
+                    <label for="useremail">Email Address</label>
+                    <input type="email" id="useremail" placeholder="orpheus@example.com" required>
+                </div>
+            </div>
+
+            <div class="personal full-width">
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" placeholder="What's on your mind?..." required></textarea>
+            </div>
+
+            <div class="submitpart">
+                <button type="submit" id="submitbutton">
+                    <span>Send Message</span>
+                    <i data-lucide="send"></i>
+                </button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footercontent">
+            <p>Made by Shiva Kaushal</p>
+        </div>
+    </footer>
     <script>
 
         fetch("/header/header.html")
