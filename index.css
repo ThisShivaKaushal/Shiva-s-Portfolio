@@ -214,9 +214,7 @@ body {
     gap: 12px;
 }
 
-/* =========================================
-   DYNAMIC SERVER SECTIONS
-   ========================================= */
+
 .server {
     width: 100%;
     max-width: 1400px;
@@ -231,7 +229,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding-bottom: 12px;
 }
 
@@ -253,9 +251,7 @@ body {
     color: #111;
 }
 
-/* =========================================
-   BENTO GRID STYLING
-   ========================================= */
+
 .bentogrid {
     display: grid;
     gap: 20px;
@@ -289,14 +285,14 @@ body {
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .bentocard:hover {
     background: rgba(255, 255, 255, 0.9);
     transform: translateY(-4px);
     border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .cardcontents {
@@ -321,7 +317,7 @@ body {
     padding: 24px 32px;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     color: #111;
 }
 
@@ -334,7 +330,7 @@ body {
 
 .video-info {
     padding: 20px 24px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .video-info h4 {

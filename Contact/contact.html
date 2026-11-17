@@ -41,7 +41,7 @@
             </div>
 
             <div class="submitpart">
-                <button type="submit" id="submitbutton">
+                <button type="submit" id="submitbutton" class="submitbuttons">
                     <span>Send Message</span>
                     <i data-lucide="send"></i>
                 </button>
@@ -57,6 +57,8 @@
         </div>
     </footer>
     <script>
+
+        lucide.createIcons();
 
         fetch("/header/header.html")
             .then(response => response.text())
