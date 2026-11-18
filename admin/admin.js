@@ -2,6 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
 import { getFirestore, collection, addDoc, serverTimestamp, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,9 +22,35 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
+const auth = getAuth(app);
+
+
 
 
 //inbox stuff
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        document.body.style.display = "flex";
+        loadInbox();
+    } else {
+        window.location.href = "/login.html";
+    }
+});
+
+const logoutBtn = document.getElementById('logout-button');
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', async () => {
+        logoutBtn.innerHTML = `Logging out...`;
+        try {
+            await signOut(auth);
+            window.location.replace("/login.html");
+        } catch (error) {
+            console.error("Error signing out:", error);
+            alert("Failed to log out. Please try again.");
+        }
+    });
+}
+
 
 async function loadInbox() {
     const inboxList = document.getElementById('inboxlist');
@@ -61,7 +88,7 @@ async function loadInbox() {
 document.getElementById('addproject').addEventListener('submit', async (e) => {
     e.preventDefault();
     const button = e.target.querySelector('button');
-    button.innerHTML = "Adding.."; 
+    button.innerHTML = "Adding..";
 
     try {
         await addDoc(collection(db, "projects"), {

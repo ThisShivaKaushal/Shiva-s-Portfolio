@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="/admin/admin.css">
 </head>
 
-<body>
+<body style="display: none;">
     <aside class="sidebar">
         <h2>Admin Panel</h2>
         <button class="sidebarbutton active" data-target="inbox"><i data-lucide="inbox"></i>Inbox</button>
         <button class="sidebarbutton" data-target="works"><i data-lucide="briefcase"></i>
             Works</button>
         <button class="sidebarbutton" data-target="videos"><i data-lucide="video"></i>Videos</button>
+        <button id="logout-button" class="tab-btn" style="color: #d32f2f; margin-top: auto;">
+            <i data-lucide="log-out"></i> Logout
+        </button>
     </aside>
 
     <main class="main">
@@ -61,6 +64,8 @@
                 </form>
             </div>
         </div>
+
+
     </main>
 
     <script src="/admin/admin.js" type="module"></script>

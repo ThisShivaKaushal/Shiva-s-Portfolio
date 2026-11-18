@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/contact/contact.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body id="login-page">
+    <main class="logincontent">
+        <form class="contactform" id="contactform">
+
+            <h2>Admin Access</h2>
+
+            <div id="formfeedback" class="feedback-banner" style="display: none;"></div>
+
+            <div class="personal">
+                <div class="information">
+                    <label for="adminemail">Email Address</label>
+                    <input type="email" id="adminemail" placeholder="orpheus@example.com" required>
+                </div>
+
+                <div class="information" style="text-align: left; margin-bottom: 16px;">
+                    <label for="adminpassword">Password</label>
+                    <input type="password" id="adminpassword" placeholder="..........">
+
+                </div>
+
+                <button type="submit" id="loginbutton" class="submitbutton" style="width: 100%;">
+                    <span>Login to Admin</span>
+                    <i data-lucide="lock"></i>
+
+                </button>
+
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footercontent">
+            <p>Made by Shiva Kaushal</p>
+        </div>
+    </footer>a
+
+    </main>
+    <script type="module" src="login.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
