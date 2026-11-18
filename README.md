@@ -16,3 +16,24 @@ Check it out: **https://thisshivaportfolio**
 
 ## Screenshots 
 
+![preview](./screeshot/home.png)
+![preview](./screeshot/collaborate.png)
+![preview](./screeshot/collaborate-faq.png)
+![preview](./screeshot/aboutme.png)
+![preview](./screeshot/inbox.png)
+![preview](./screeshot/work.png)
+![preview](./screeshot/works.png)
+
+## Details
+
+This is a portfolio with backend, admin, and a wat to communicate with the user. User can see the works,and can sent message to developer for collaborate, or can contact.
+
+## Future Update
+
+1. I will add all the works/projects in projects section also.
+
+2. I will add videos too.
+
+3. I will add a blod section in it.
+
+4. I will add a chat system too.
