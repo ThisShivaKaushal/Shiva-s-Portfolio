@@ -16,13 +16,13 @@ Check it out: **https://thisshivaportfolio**
 
 ## Screenshots 
 
-![preview](./screeshot/home.png)
-![preview](./screeshot/collaborate.png)
-![preview](./screeshot/collaborate-faq.png)
-![preview](./screeshot/aboutme.png)
-![preview](./screeshot/inbox.png)
-![preview](./screeshot/work.png)
-![preview](./screeshot/works.png)
+![preview](./screeshots/home.png)
+![preview](./screeshots/collaborate.png)
+![preview](./screeshots/collaborate-faq.png)
+![preview](./screeshots/aboutme.png)
+![preview](./screeshots/inbox.png)
+![preview](./screeshots/work.png)
+![preview](./screeshots/works.png)
 
 ## Details
 
